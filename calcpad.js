@@ -38,9 +38,9 @@ answerInput1Elem.addEventListener("keydown", (event) => {
 })
 
 function GL3Q1() {
-    const iTemp = 32//getRanNum(30,60).toFixed(1)
-    const iPressure = 24.3//getRanNum(20,50).toFixed(1)
-    const fTemp = 6.7//getRanNum(0,29).toFixed(1)
+    const iTemp = 60//getRanNum(30,60).toFixed(1)
+    const iPressure = 30//getRanNum(20,50).toFixed(1)
+    const fTemp = 7//getRanNum(0,29).toFixed(1)
 
     document.querySelector('.GL3Q1 .iTemp').innerHTML = `${iTemp}`
     document.querySelector('.GL3Q1 .fTemp').innerHTML = `${fTemp}`
