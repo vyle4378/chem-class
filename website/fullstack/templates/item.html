@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemistry Curriculum</title>
-    <link rel="stylesheet" href="item.css">
-    <script src="curriculum.js"></script>
-    <script defer type="module" src="item.js"></script>
+    <!-- Make sure to put the / in front of the static.
+    This ensures the browser always requests the file from /static/curriculum.js, 
+    no matter which page you're on. 
+    
+    Ex:
+    "static/curriculum.js" is a relative path and will be interpretted as
+    "/item/static/curriculum.js"
+    -->
+    <script src="/static/curriculum.js"></script> 
+    <script defer type="module" src="/static/item.js"></script>
 </head>
 <body>
     <h2 id="itemTitle"></h2>
@@ -15,7 +22,7 @@
     </div>
     <div id="contentContainer"></div>
     <div>
-        <button onclick=" window.location.href = 'index.html' ">Home</button>
+        <button onclick=" window.location.href = '/' ">Home</button>
     </div>
 </body>
 </html>

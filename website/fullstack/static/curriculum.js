@@ -16,17 +16,3 @@ export const chemistryCurriculum = {
         },
     ]
 }
-
-
-export function updateAllChanges(curriculum, oldTag, newTitle, newContent) {
-    const item = curriculum.items.find(item => item.tag === oldTag)
-    item.title = newTitle
-    item.content = newContent
-    item.tag = makeTag(newTitle)
-    return curriculum
-}
-
-function makeTag(title) {
-    const tag = String(title).toLowerCase()
-    return tag.replaceAll(" ", "-")
-}

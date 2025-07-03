@@ -1,7 +1,8 @@
-import { chemistryCurriculum } from "./curriculum.js"
+import { chemistryCurriculum } from "/static/curriculum.js"
 
-const params = new URLSearchParams(window.location.search)
-const tag = params.get("tag")
+console.log("hi")
+const pathParts = window.location.pathname.split('/');
+const tag = pathParts[pathParts.length - 1];
 
 const titleInput = document.getElementById("titleInput")
 const contentInput = document.getElementById("contentInput")
@@ -15,13 +16,12 @@ function generateEditMaterials () {
         titleInput.value = item.title
         contentInput.value = item.content
 
-
         cancelButton.addEventListener("click", () => {
-            window.location.href = `item.html?tag=${item.tag}`
+            window.location.href = `/item/${item.tag}`
         })
 
         saveButton.addEventListener("click", () => {
-            window.location.href = `item.html?tag=${item.tag}`
+            window.location.href = `/item/${item.tag}`
         })
     } 
 }

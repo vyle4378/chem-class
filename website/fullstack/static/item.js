@@ -1,7 +1,7 @@
-import { chemistryCurriculum } from "./curriculum.js"
+import { chemistryCurriculum } from "/static/curriculum.js"
 
-const params = new URLSearchParams(window.location.search)
-const tag = params.get("tag")
+const pathParts = window.location.pathname.split('/');
+const tag = pathParts[pathParts.length - 1];
 
 const itemTitle = document.getElementById('itemTitle')
 const contentContainer = document.getElementById('contentContainer')
@@ -12,10 +12,11 @@ function generateItemMaterials () {
     if (item) {
         itemTitle.innerHTML = item.title
         editButton.addEventListener("click", () => {
-            window.location.href = `edit.html?tag=${item.tag}`
+            window.location.href = `/edit/${item.tag}`
         })
         contentContainer.innerHTML = `<p>${item.content}</p>`
     }   
 }
 
 generateItemMaterials()
+

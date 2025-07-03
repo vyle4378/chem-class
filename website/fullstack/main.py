@@ -18,9 +18,13 @@ templates = Jinja2Templates(directory="fullstack/templates")
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request}) # "index.html" the path that dev sees
 
-@app.get("/item", response_class=HTMLResponse)
-def to_content_page(request: Request, tag):
-    return templates.TemplateResponse("item.html", {"request": request})
+@app.get("/item/{tag}", response_class=HTMLResponse)
+def to_content_page(request: Request):
+    return templates.TemplateResponse('item.html', {"request": request})
+
+@app.get("/edit/{tag}", response_class=HTMLResponse)
+def to_edit_page(request: Request):
+    return templates.TemplateResponse('edit.html', {"request": request})
 
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True) 
