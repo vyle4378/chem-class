@@ -88,7 +88,5 @@ def edit_item(id: str, updates: UpdateItem):
             return curriculum    
     return "Item not found."
 
-
-
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
