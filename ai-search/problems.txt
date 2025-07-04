@@ -1,0 +1,113 @@
+Propane gas (C3H8) combusts in oxygen to form carbon dioxide and water. How many grams of CO2 are produced when 44 g of C3H8 burns completely?
+
+If 5.0 g of Al reacts with 10.0 g of Cl2 to form AlCl3, which reactant is limiting?
+
+A reaction theoretically produces 25.0 g of product. If the actual yield is 18.0 g, what is the percent yield?
+
+How many moles of NH3 are formed when 4 moles of N2 react with excess hydrogen in the Haber process?
+
+How many grams of O2 are produced when 10.0 g of KClO3 decomposes according to:
+2 KClO3 -> 2 KCl + 3 O2
+
+How many liters of 0.500 M NaOH are needed to completely neutralize 25.0 mL of 2.00 M H2SO4?
+
+If 0.500 mol of a compound weighs 46 g, what is its molar mass?
+
+What volume (in liters) will 2.00 mol of nitrogen gas occupy at STP?
+
+How many grams of H2O are produced when 8 g of H2 react with excess O2?
+
+A compound contains 40% carbon, 6.7% hydrogen, and 53.3% oxygen by mass. Find its empirical formula.
+
+What is the freezing point of water when 58.5 g of NaCl is dissolved in 1 kg of water? (Kf = 1.86 °C·kg/mol)
+
+Calculate the boiling point of a solution containing 342 g of sucrose in 1 kg of water. (Kb = 0.512 °C·kg/mol)
+
+What is the osmotic pressure at 25 °C of a 0.20 M glucose solution?
+
+A 2.0 g sample of an unknown non-electrolyte lowers the freezing point of 100 g of benzene by 0.45 °C. (Kf = 5.12 °C·kg/mol) What is its molar mass?
+
+For Na2SO4, what is the expected van’t Hoff factor?
+
+What is the vapor pressure of water above a solution of 200 g glycerol in 1 kg water? (Pure water vapor pressure = 23.8 mmHg)
+
+What is the boiling point of water with 0.50 mol of NaCl dissolved in 500 g water?
+
+What is the freezing point of water when 0.10 mol of CaCl2 is dissolved in 100 g water?
+
+Find the mole fraction of urea in a solution of 30 g urea in 120 g water.
+
+Which has the lower freezing point: 1 m NaCl solution or 1 m glucose solution?
+
+If 100 g of water absorbs 8360 J of heat, what is the change in temperature? (c = 4.184 J/g·°C)
+
+Given Delta H = -890 kJ for the combustion of 1 mol CH4, how much heat is released when 5 moles of CH4 combust?
+
+Is the dissolution of NH4NO3 in water endothermic or exothermic if the solution gets colder?
+
+Calculate Delta H for this reaction:
+2 NO(g) + O2(g) -> 2 NO2(g)
+Given:
+Delta Hf(NO) = +90 kJ/mol,
+Delta Hf(NO2) = +34 kJ/mol.
+
+Use Hess’s Law to find Delta H for:
+C(s) + 1/2 O2(g) -> CO(g)
+Given:
+C(s) + O2(g) -> CO2(g), Delta H = -393.5 kJ
+CO(g) + 1/2 O2(g) -> CO2(g), Delta H = -283 kJ
+
+Estimate Delta H for:
+H2 + Cl2 -> 2 HCl
+Given bond enthalpies:
+D(H-H) = 436 kJ/mol,
+D(Cl-Cl) = 242 kJ/mol,
+D(H-Cl) = 431 kJ/mol.
+
+How much energy is needed to melt 50 g of ice at 0 °C? (Delta Hfus = 6.01 kJ/mol)
+
+Propane releases 2220 kJ per mole combusted. How much energy is released per gram?
+
+A 25 g metal sample absorbs 100 J, raising its temperature by 20 °C. What is its specific heat capacity?
+
+How much heat is needed to vaporize 100 g of water at 100 °C? (Delta Hvap = 40.7 kJ/mol)
+
+100 g of water at 80 °C is mixed with 100 g of water at 20 °C. What is the final temperature?
+
+A 1.0 g sample releases 5000 J in a bomb calorimeter. What is the heat capacity of the calorimeter if the temperature rises by 2.5 °C?
+
+A 50 g metal at 150 °C is placed in 100 g of water at 20 °C. Final temperature is 25 °C. What is the specific heat of the metal?
+
+If 50 mL of 1 M HCl reacts with 50 mL of 1 M NaOH and the temperature rises by 6 °C, find the enthalpy change assuming the solution has the same heat capacity and density as water.
+
+100 mL of water absorbs 1260 J. By how many °C does the temperature increase?
+
+Burning 0.5 g of glucose raises water temperature by 3 °C in a calorimeter containing 500 g of water. Calculate the heat of combustion per gram of glucose.
+
+How much energy is needed to melt 200 g of ice at 0 °C?
+
+If 100 g of water cools from 90 °C to 40 °C, how much heat is lost?
+
+A 20 g sample of metal absorbs 500 J, raising its temperature by 25 °C. What is its specific heat capacity?
+
+100 mL of 1 M HCl and 100 mL of 1 M NaOH are mixed, and the temperature rises by 7 °C. What is the heat released?
+
+Arrange the following elements in order of increasing atomic radius: Na, Al, P.
+
+Which element has the highest first ionization energy: N, O, or F? Explain why.
+
+Compare the electronegativities of Cl and Br. Which is higher and why?
+
+Which element would release more energy when gaining an electron: S or O? Justify your answer.
+
+Arrange the following ions in order of increasing ionic radius: O2-, F-, Na+, Mg2+.
+
+Between Si, P, and Mg, which element has the greatest metallic character? Why?
+
+Why does the third ionization energy of magnesium show a large jump compared to the first and second ionization energies?
+
+Why does atomic radius decrease from left to right across a period?
+
+Explain why electronegativity decreases as you move down Group 17 (the halogens).
+
+Arrange these elements in order of increasing first ionization energy: K, Na, Li.
