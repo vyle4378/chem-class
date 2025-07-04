@@ -9,6 +9,11 @@ const contentInput = document.getElementById("contentInput")
 const cancelButton = document.getElementById("cancelButton")
 const saveButton = document.getElementById("saveButton")
 
+function makeTag(title) {
+    const tag = String(title).toLowerCase()
+    return tag.replaceAll(" ", "-")
+}
+
 
 function generateEditMaterials () {
     const item = chemistryCurriculum.items.find(item => item.tag === tag)
@@ -17,6 +22,7 @@ function generateEditMaterials () {
         contentInput.value = item.content
 
         cancelButton.addEventListener("click", () => {
+            const data = response.json()
             window.location.href = `/item/${item.tag}`
         })
 

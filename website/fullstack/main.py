@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates 
 import uvicorn
+from pydantic import BaseModel
 
 
 app = FastAPI()
@@ -11,6 +12,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="fullstack/static"), name="static")
 # you should only have 1 templates folder, so you will always do this once
 templates = Jinja2Templates(directory="fullstack/templates")
+
 
 
 
@@ -25,6 +27,8 @@ def to_content_page(request: Request):
 @app.get("/edit/{tag}", response_class=HTMLResponse)
 def to_edit_page(request: Request):
     return templates.TemplateResponse('edit.html', {"request": request})
+
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True) 
