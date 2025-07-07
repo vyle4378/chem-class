@@ -15,7 +15,7 @@ class Item(Base):
     __tablename__ = "chemCurriculum"
     id = Column(Integer, primary_key=True)
     title = Column(String, index=True, unique=True)
-    content = Column(String, index=True, nullable=True)
+    content = Column(String, index=True)
 
 # create all tables that inhereted the Base class
 Base.metadata.create_all(bind=engine)
@@ -67,4 +67,4 @@ def delete_item(item_id: int):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=3000, reload=True)

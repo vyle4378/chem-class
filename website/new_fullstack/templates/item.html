@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Curriculum</title>
+    <!-- Make sure to put the / in front of the static.
+    This ensures the browser always requests the file from /static/curriculum.js, 
+    no matter which page you're on. 
+    
+    Ex:
+    "static/curriculum.js" is a relative path and will be interpretted as
+    "/item/static/curriculum.js"
+    -->
+    <script src="/static/curriculum.js"></script> 
+    <script defer type="module" src="/static/item.js"></script>
+</head>
+<body>
+    <button onclick=" window.location.href = '/' ">Home</button>
+    <h2 id="itemTitle"></h2>
+    <div id="contentContainer"></div>
+    <button id="editButton">Edit</button>
+    <button id="deleteButton">Delete</button>
+    
+</body>
+</html>
+

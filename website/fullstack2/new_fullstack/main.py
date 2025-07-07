@@ -3,7 +3,9 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates 
 import uvicorn
-from pydantic import BaseModel
+
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 
 app = FastAPI()
@@ -12,6 +14,8 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 # you should only have 1 templates folder, so you will always do this once
 templates = Jinja2Templates(directory="templates")
+
+engine = create_engine("sqlite:///./chemCurriculum.db")
 
 
 @app.get("/", response_class=HTMLResponse) # "/" the path user sees
