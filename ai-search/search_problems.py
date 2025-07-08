@@ -9,7 +9,6 @@ class Problem:
         self.text = text
         self.embedding = embedding
 
-
 class SearchResult(TypedDict):
     problem: Problem
     simularity: float
