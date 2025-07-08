@@ -7,13 +7,16 @@ with open("upload.json", "r") as f:
 db = SessionLocal()
 titles = db.query(Item.title).all()
 titles = [t[0] for t in titles]
-print("list of titles:", titles)
+print("list of titles already in table:", titles)
 
 for item in data:
     if item["title"] in titles:
         continue
     else:
-        db.add(Item(title=item["title"], content=item["content"]))
+        db.add(Item(title=item["title"], content=item["content"], position=item["position"]))
+        print("title added:", item["title"])
+
+
 
 # # Convert each dictionary to an Item object
 # items = [Item(**item_data) for item_data in data]

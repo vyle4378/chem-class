@@ -1,10 +1,11 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Body
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates 
 import uvicorn
 from pydantic import BaseModel
 from fastapi import Depends
+from typing import List
 
 app = FastAPI()
 # app.mount(path, app, name of this path which can be anything | None)
@@ -15,7 +16,7 @@ templates = Jinja2Templates(directory="templates")
 
 # --------------
 
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String, Float, create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base, Session
 
 engine = create_engine("sqlite:///./curriculum.db")
@@ -25,14 +26,19 @@ Base = declarative_base()
 class Item(Base):
     __tablename__ = "chemCurriculum"
     id = Column(Integer, primary_key=True)
+    position = Column(Float, index=True)
     title = Column(String, index=True, unique=True)
     content = Column(String, index=True, nullable=True)
-    # todo: add unique position
+
 
 class ItemUpdate(BaseModel):
     id: int
     new_title: str
     new_content: str | None = "New Content"
+
+class PositionUpdate(BaseModel):
+    id: int
+    position: float
 
 Base.metadata.create_all(bind=engine)
 
@@ -59,12 +65,25 @@ async def create_item(db: Session = Depends(get_db)):
 
 # index 
 
-@app.get("/titles")
-async def get_titles(db: Session = Depends(get_db)):
-    titles = db.query(Item.title).all() # returns [('Lesson 1',), ('Lesson 2',)]
-    titles = [t[0] for t in titles] # gets the first part of the tuple
-    # todo: sort by position
-    return titles
+@app.get("/items")
+async def get_all_items(db: Session = Depends(get_db)):
+    items = db.query(Item).order_by(Item.position).all() # get all items sorted by position
+    return items
+
+@app.put("/reorder-items")
+async def reorder_items(updates: List[PositionUpdate] = Body(...), db: Session = Depends(get_db)):
+    for update in updates:
+        item = db.query(Item).filter(Item.id == update.id).first()
+        if item == None:
+            return {"message": "no item with this index"}
+        
+        item.position = update.position
+    
+    db.commit()
+        
+    items = db.query(Item).order_by(Item.position).all()
+    return items
+
 
 # item
 
@@ -113,12 +132,12 @@ async def delete_item(title: str, db: Session = Depends(get_db)):
 
 # --------------
 
+# @app.get("/titles")
+# async def get_titles(db: Session = Depends(get_db)):
+#     titles = db.query(Item.title).order_by(Item.position).all() # returns [('Lesson 1',), ('Lesson 2',)]
+#     titles = [t[0] for t in titles] # gets the first part of the tuple
+#     return titles
 
-
-@app.get("/items")
-def get_all_items(db: Session = Depends(get_db)):
-    items = db.query(Item).all() # get all
-    return items
 
 
 if __name__ == "__main__":

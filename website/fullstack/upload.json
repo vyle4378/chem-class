@@ -1,30 +1,37 @@
 [
     {
         "title": "Atomic Structure",
-        "content": "Atomic structure is the study of..."
+        "content": "Atomic structure is the study of...",
+        "position": 1
     },
     {
         "title": "Periodic Table",
-        "content": "the periodic table is a table that lists all the elements in the periodic table and their properties."
+        "content": "the periodic table is a table that lists all the elements in the periodic table and their properties.",
+        "position": 2
     },
     {
         "title": "Chemical Bonding",
-        "content": "chemical bonding is the study of the forces that hold atoms together to form molecules and compounds."
+        "content": "chemical bonding is the study of the forces that hold atoms together to form molecules and compounds.",
+        "position": 3
     },
     {
         "title": "Intermolecular Forces",
-        "content": "intermolecular forces are the hjhjhjhjhjhjhforces that hold molecules together."
+        "content": "intermolecular forces are the forces that hold molecules together.",
+        "position": 5
     },
     {
         "title": "Chemical Reactions",
-        "content": "CHemical reactions are the processes by which atoms and molecules are rearranged to form new substances."
+        "content": "CHemical reactions are the processes by which atoms and molecules are rearranged to form new substances.",
+        "position": 4
     },
     {
         "title": "Stoichiometry",
-        "content": "stoichiometry is the study of the relationships between the amounts of reactants and products in a chemical reaction."
+        "content": "stoichiometry is the study of the relationships between the amounts of reactants and products in a chemical reaction.",
+        "position": 6
     },
     {
         "title": "States of Matter",
-        "content": "States of Matter are the different forms of matter that can exist. There are three states of matter: solid, liquid, and gas."
+        "content": "States of Matter are the different forms of matter that can exist. There are three states of matter: solid, liquid, and gas.",
+        "position": 0
     }
 ]

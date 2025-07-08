@@ -1,4 +1,5 @@
 const newButton = document.getElementById('newButton')
+const itemList = document.getElementById('itemList')
 
 newButton.addEventListener("click", async () => {
     try {
@@ -11,28 +12,23 @@ newButton.addEventListener("click", async () => {
     }
 })
 
+
 async function getTitles() {
     try {
-        const response = await fetch('/titles')
-        const titles = await response.json()
-        // console.log(titles)
+        const response = await fetch('/items')
+        const items = await response.json()
 
-        for (const title of titles) {
+        for (const item of items) {
             const itemElement = document.createElement("div");
-            itemElement.classList.add("curriculum-item");
+            itemElement.classList.add("item");
+            itemElement.dataset.id = item.id
 
-            // itemElement.innerHTML= "<a href= ">${title}</button>`
-            // curriculumContainer.append(itemElement)
+            const linkElement = document.createElement("a")
+            linkElement.href = `/item-page/${item.title}`
+            linkElement.textContent = item.title
 
-            // itemElement.addEventListener("click", () => {
-            //     window.location.href = `/item-page/${title}`
-
-            itemElement.innerHTML= `<button>${title}</button>`
-            curriculumContainer.append(itemElement)
-
-            itemElement.addEventListener("click", () => {
-                window.location.href = `/item-page/${title}`
-            })
+            itemElement.append(linkElement)
+            itemList.append(itemElement)
         }
     } catch(e) {
         console.error("Error:", e)
@@ -40,3 +36,27 @@ async function getTitles() {
 }
 
 getTitles()
+
+
+// todo: make it so that only the drag icon allows you to drag, not anything else?
+new Sortable(itemList, {
+    animation: 150,
+    onEnd: async () => {
+        const reorderedItems = [...itemList.children].map((el, index) => ({
+            id: Number(el.dataset.id),
+            position: index
+        }))
+
+        try {
+            await fetch('/reorder-items', {
+                method: "PUT",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(reorderedItems)
+            })
+            
+        } catch(e) {
+            console.error("Error:", e)
+        }
+
+    }
+})

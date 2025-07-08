@@ -1,3 +1,4 @@
+
 const pathParts = window.location.pathname.split('/');
 const title = pathParts[pathParts.length - 1].replace("%20", " ");
 
