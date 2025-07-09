@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text Editor</title>
+    <script defer src="editor.js"></script>
+   
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+    <div class="container" id="toolbar">
+            <!-- Undo/Redo -->
+            <button><i id="undo" class="option-button fa-solid fa-rotate-left"></i></button>
+            <button><i id="redo" class="option-button fa-solid fa-rotate-right"></i></button>
+            
+            <!-- Text Format -->
+            <button><i id="bold" class="option-button fa-solid fa-bold"></i></button>
+            <button><i id="italic" class="option-button fa-solid fa-italic"></i></button>
+            <button><i id="underline" class="option-button fa-solid fa-underline"></i></button>
+            <button><i id="strikethrough" class="option-button fa-solid fa-strikethrough"></i></button>
+            <button><i id="superscript" class="option-button fa-solid fa-superscript"></i></button>
+            <button><i id="subscript" class="option-button fa-solid fa-subscript"></i></button>
+            
+            <!-- List -->
+            <button><i id="insertOrderedList" class="option-button fa-solid fa-list-ol"></i></button>
+            <button><i id="insertUnorderedList" class="option-button fa-solid fa-list"></i></button>
+            
+            <!-- Link -->
+            <button><i id="createLink" class="option-button fa fa-link"></i></button>
+            <button><i id="unlink" class="option-button fa fa-unlink"></i></button>
+            
+            <!-- Alignment -->
+            <div id="alignment">
+                <button id="dropdown-toggle"><i class="option-button fa-solid fa-align-left"></i></button>
+                <div id="dropdown-menu">
+                  <button data-value="justifyLeft"><i class="option-button fa-solid fa-align-left"></i></button>
+                  <button data-value="justifyCenter"><i class="option-button fa-solid fa-align-center"></i></button>
+                  <button data-value="justifyRight"><i class="option-button fa-solid fa-align-right"></i></button>
+                  <button data-value="justifyFull"><i class="option-button fa-solid fa-align-justify"></i></button>
+                </div>
+            </div>
+            
+            <!-- Indent -->
+            <button><i id="indent" class="option-button spacing fa-solid fa-indent"></i></button>
+            <button><i id="outdent" class="option-button spacing fa-solid fa-outdent"></i></button>
+            
+            <!-- Headings -->
+            <select id="formatBlock" class="adv-option-button">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select>
+
+            <!-- Font -->
+            <select id="fontName" class="adv-option-button">
+                <option value="Arial">Arial</option>
+                <option value="Times">Times</option>
+                <option value="Poppins">Poppins</option>
+                <option value="Cursive">Cursive</option>
+            </select>
+            
+            <select id="fontSize" class="adv-option-button">
+                <option value="1">8pt</option>
+                <option value="2">10pt</option>
+                <option value="3">12pt</option>
+                <option value="4">14pt</option>
+                <option value="5">18pt</option>
+                <option value="6">24pt</option>
+                <option value="7">36pt</option>
+            </select>
+
+    </div>
+    
+    <div id="editor" contenteditable="true" 
+    style="min-height:300px; border:1px solid #ccc; padding:10px; margin-top:10px;"></div>
+
+
+
+    
+        <!-- <input type="color" data-command="foreColor" title="Font Color">
+        <input type="color" data-command="hiliteColor" title="Highlight Color">
+        <input type="file" id="fileInput" style="display:none" multiple>
+        <button type="button" id="imageUploadBtn">🖼️ Image/File</button>  --> 
+    
+
+    <!-- <div id="latexModal" style="display:none; position:fixed; top:20%; left:50%; transform:translate(-50%,0); background:#fff; border:1px solid #ccc; padding:20px; z-index:1000;">
+        <h3>Insert LaTeX</h3>
+        <textarea id="latexInput" rows="3" style="width:100%"></textarea><br>
+        <button type="button" id="insertLatex">Insert</button>
+        <button type="button" id="closeLatex">Close</button>
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+</body>
+</html>

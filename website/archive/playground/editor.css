@@ -1,0 +1,72 @@
+.option-button {
+    padding: 5px 4px;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin: 0px 0px 0px 0px;
+}
+
+.option-button:hover {
+    background-color: lightgray
+}
+
+button {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px;
+    border: none;
+}
+/* button:active {
+    background-color: lightgray;
+} */
+
+
+
+select {
+    padding: 3px 1px;
+    border: none;
+    border-radius: 3px;
+}
+  .options label,
+  .options select {
+    font-family: "Poppins", sans-serif;
+}
+
+select:hover {
+    background-color: lightgray;
+}
+
+
+
+
+
+
+#alignment {
+    position: relative;
+    display: inline-block;
+}
+  
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    min-width: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#dropdown-menu button {
+    background: #fff;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
