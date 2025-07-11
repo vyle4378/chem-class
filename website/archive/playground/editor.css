@@ -10,15 +10,16 @@
 .option-button:hover {
     background-color: lightgray
 }
+.option-button.active {
+    background-color: lightgray;
+}
 
 button {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px;
     border: none;
 }
-/* button:active {
-    background-color: lightgray;
-} */
+
 
 
 
