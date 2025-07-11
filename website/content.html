@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 50%;">
+            <tr>
+                <td width="5%" valign="top">1</td>
+                <td width="20%" valign="top">
+                    <p style="margin-top: 0;">What is an atom?</p>
+                    <img src="atom-diagram.png" alt="Atom diagram" style="width: 100%; max-width: 100px;">
+                </td>
+                <td width="75%" valign="top">
+                        <li>An <b>atom</b> is the smallest unit of matter that retains the properties of an element.</li>
+                        <li>An <a href="https://google.com">atom</a> is made up of a nucleus and electrons.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const content = document.getElementById('content')
+        jsonContent = JSON.stringify(content.innerHTML)
+        console.log(jsonContent)
+    </script>
+</body>
+</html>

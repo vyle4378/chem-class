@@ -130,6 +130,11 @@ async def delete_item(title: str, db: Session = Depends(get_db)):
     return {"message": "Item deleted",
             "remaining items": rem_items} # handled here though
 
+
+@app.get("/atom-diagram.png")
+async def get_image():
+    return "<img src=\"/atom-diagram.png\" alt=\"Atom diagram\" style=\"width: 100%; max-width: 100px;\">\n"
+
 # --------------
 
 # @app.get("/titles")

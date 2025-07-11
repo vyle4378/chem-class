@@ -12,7 +12,8 @@ async function generateEditMaterials () {
         const item = await response.json()
 
         titleInput.value = item.title
-        contentInput.value = item.content
+        console.log(item.content)
+        contentInput.innerHTML = item.content
 
         cancelButton.addEventListener("click", () => {
             window.location.href = `/item-page/${title}`
@@ -26,7 +27,7 @@ async function generateEditMaterials () {
                     body: JSON.stringify({
                         id: item.id,
                         new_title: titleInput.value,
-                        new_content: contentInput.value,
+                        new_content: contentInput.innerHTML,
                     })
                 })
                 
