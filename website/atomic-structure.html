@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Structure</title>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+        #content {
+            width: 70%;
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+        }
+        #questions {
+            width: 30%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.25;">
+    <div class="container">
+        <div id="content" style="padding: 15px 15px;">
+            <h1 style="margin-top:0">Atomic Structure</h1>
+            <h2 style="margin:0">What is an atom?</h3>
+            <table border="0" style="border-collapse: collapse; width: 100%; margin: 0;">
+                <tr>
+                    <td valign="top" width="70%">
+                        <ul>
+                            <li>An <b>atom</b> is the smallest building block of matter</li>
+                            <li>Like lego blocks, or the letters in the alphabet:
+                                <ul>
+                                    <li>Each atom has its own size and its own characteristics.</li>
+                                    <li>Atoms can be combined with other atoms to make new things.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="center" width="30%">
+                        <img src="graphite.png" alt="Atom diagram" style="width: 100%; min-width: 100px; max-width: 150px;">
+                    </td>
+                </tr>
+            </table>
+            <p>Here are some examples of how atoms combine to make <u>molecules</u>:</p>
+            <table border="0" style="border-collapse: collapse; width: 100%; margin: 0;">
+                <tr>
+                    <td valign="top" width="25%"><img src="co2.png" alt="CO2" style="width: 50%; min-width: 100px; max-width: 150px;"></td>
+                    <td valign="top" width="25%"><img src="h2o.png" alt="H2O" style="width: 50%; min-width: 100px; max-width: 150px;"></td>
+                    <td valign="top" width="25%"><img src="h2.png" alt="H2" style="width: 50%; min-width: 100px; max-width: 150px;"></td>
+                    <td valign="top" width="25%"><img src="o2.png" alt="O2" style="width: 50%; min-width: 100px; max-width: 150px;"></td>
+                </tr>
+            </table>
+            <br>
+            <hr>
+            <br>
+            <h2 style="margin:0">What's inside an atom?</h2>
+            <table border="0" style="border-collapse: collapse; width: 100%; margin: 0;">
+                <tr>
+                    <td valign="top" width="70%">
+                        <ul>
+                            <li>An atom is made up of a single core (called the <b>nucleus</b>) and an <b>electron cloud</b> that surrounds the nucleus.</li>
+                            <li>There are three <b>subatomic particles</b> inside the atom:
+                                <ul>
+                                    <li>The <b>protons</b> and <b>neutrons</b> are bundled together inside the nucleus.</li>
+                                    <li>The <b>electrons</b> are floating inside the electron cloud.</li>
+                    </td>
+                    <td valign="center" width="30%">
+                        <img src="atom.png" alt="Atom diagram" style="width: 100%; min-width: 10px; max-width: 150px;">
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+            <br>
+            <h2 style="margin:0">What are some key characteristics of protons, neutrons, and electrons?</h2>
+            
+            <table border="1" style="border-collapse: collapse; width: 100%; margin: 10px 0;">
+                <tr>
+                    <td style="padding: 8px;"></td>
+                    <td style="padding: 8px;"><b>Proton (p+)</b></td>
+                    <td style="padding: 8px;"><b>Neutron (n)</b></td>
+                    <td style="padding: 8px;"><b>Electron (e-)</b></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; font-weight: bold;">Location</td>
+                    <td style="padding: 8px;">Nucleus</td>
+                    <td style="padding: 8px;">Nucleus</td>
+                    <td style="padding: 8px;">Electron cloud</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; font-weight: bold;">Charge</td>
+                    <td style="padding: 8px;">Positive</td>
+                    <td style="padding: 8px;">Neutral</td>
+                    <td style="padding: 8px;">Negative</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; font-weight: bold;">Relative Mass</td>
+                    <td style="padding: 8px;">1</td>
+                    <td style="padding: 8px;">1</td>
+                    <td style="padding: 8px;">0</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; font-weight: bold;">Importance</td>
+                    <td valign="top" style="padding: 8px;">
+                        - Contributes to the atom's charge & mass<br><br>
+                        - Determine the atom's identity (aka <u>element</u>)
+                    </td>
+                    <td valign="top" style="padding: 8px;">
+                        - Contributes to the atom's mass<br><br>
+                        - Determine the atom's <u>isotope</u> identity
+                    </td>
+                    <td valign="top" style="padding: 8px;">
+                        - Contributes to the atom's charge<br><br>
+                        - Determine the atom's <u>bonding</u> ability (or, how does it interact with other atoms?)
+                    </td>
+                </tr>
+            </table>
+
+        
+        </div>
+
+        <div id="questions" style="padding: 5px 15px;">
+            <div id="quiz-container"></div>
+            <p id="result"></p>
+            <button id="next-button" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <script>
+        //todo:10 total correct questions
+        //todo:pull random questions from the bank
+        //todo:add a _/10 first-time-correct tracker
+        //todo:mix up the answers order
+        //todo:add partial correct for checkbox questions
+        //todo:question unclickeable after correct
+
+
+        let questions = []
+        let currentIndex = 0;
+        let score = 0;
+        const container = document.getElementById('quiz-container')
+        const nextButton = document.getElementById('next-button')
+        const result = document.getElementById('result')
+
+        const loadQuestions = async () => {
+            const response = await fetch('atomic-structure-bank.json')
+            const data = await response.json()
+            questions = data
+            loadQuestion(currentIndex)
+        }
+        
+        loadQuestions()
+
+        function loadQuestion(index) {
+            console.log(index)
+            const q = questions[index]
+
+            let inputOption = ''
+            result.textContent = ''
+            nextButton.style.display = 'none'
+
+            if (q.type === 'radio') {
+                inputOption = Object.entries(q.options).map(([key, value]) => 
+                    `<label><input type="radio" name="option" value="${key}"> ${value}</label>`).join('<br>')
+            } else if (q.type === 'checkbox') {
+                inputOption = Object.entries(q.options).map(([key, value]) => 
+                    `<label><input type="checkbox" name="option" value="${key}"> ${value}</label>`).join('<br>')
+            }
+
+            container.innerHTML = `
+                <form id="quiz-form">
+                    <p>${q.question}</p>
+                    ${inputOption}
+                    <br><br>
+                    <button id="submit-button" type="submit">Check It</button>
+                </form>
+            `
+            document.getElementById('quiz-form').addEventListener('submit', (e) => {
+                e.preventDefault()
+                const submitButton = document.getElementById('submit-button')
+                const inputOptions = document.querySelectorAll('input[name="option"]')
+
+                const formData = new FormData(e.target)
+                const answer = q.answer // "A,B"
+                const answerOptions = answer.split(',') // ["A", "B"]
+                const selectedOptions = formData.getAll('option') // ["A", "B"]
+                const selected = selectedOptions.sort().join(',') // "A,B"
+
+                function isPartialCorrect() {
+                    return selectedOptions.some(option => answerOptions.includes(option))
+                }
+
+                console.log(selectedOptions, selected, answer, answerOptions)
+
+                if (selected === answer) {
+                    submitButton.style.display = 'none'
+                    inputOptions.forEach(input => input.disabled = true)
+
+                    result.textContent = 'Correct!'
+                    result.style.color = 'green';
+
+                    if (currentIndex < questions.length - 1) {
+                        nextButton.style.display = 'inline-block';
+                    } else {
+                        nextButton.textContent = 'Finish';
+                        nextButton.style.display = 'inline-block';
+                    }
+                } else if (isPartialCorrect()) {
+                    result.textContent = 'Partial Correct! Try again.'
+                    result.style.color = 'orange'
+                } else {
+                    result.textContent = 'Incorrect! Try again.'
+                    result.style.color = 'red'
+                }
+                
+            })
+        }
+
+        document.getElementById('next-button').addEventListener('click', () => {
+            currentIndex++
+            if (currentIndex <= questions.length - 1) {
+                loadQuestion(currentIndex)
+            } else {
+                container.innerHTML = `<p>You've finished the quiz!</p>`
+                nextButton.style.display = 'none'
+                result.textContent = ''
+            }
+
+        })
+        
+        
+    </script>
+</body>
+</html>

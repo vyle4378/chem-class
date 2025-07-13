@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "question": "What is the charge of a proton?",
+        "type": "radio",
+        "options": {
+            "A": "Positive",
+            "B": "Negative",
+            "C": "Neutral"
+        },
+        "answer": "A"
+    },
+    {
+        "id": 2,
+        "question": "What is the charge of a neutron?",
+        "type": "radio",
+        "options": {
+            "A": "Positive",
+            "B": "Negative",
+            "C": "Neutral"
+        },
+        "answer": "C"
+    },
+    {
+        "id": 3,
+        "question": "What is the charge of an electron?",
+        "type": "radio",
+        "options": {
+            "A": "Positive",
+            "B": "Negative",
+            "C": "Neutral"
+        },
+        "answer": "B"
+    },
+    {
+        "id": 4,
+        "question": "Which 2 subatomic particles are in the nucleus of an atom?",
+        "type": "checkbox",
+        "options": {
+            "A": "Protons",
+            "B": "Neutrons",
+            "C": "Electrons"
+        },
+        "answer": "A,B"
+    }
+]
